@@ -1,6 +1,6 @@
 import pygame # importation de la librairie pygame
 import sys # pour fermer correctement l'application
-
+import space
 # lancement des modules inclus dans pygame
 pygame.init() 
 
@@ -16,8 +16,9 @@ player = space.Joueur()
 tir = space.Balle(player)
 tir.etat = "chargee"
 # creation des ennemis
+jeu =  space.Jeu()
 listeEnnemis = []
-for indice in range(space.Ennemi.NbEnnemis):
+for indice in range(jeu.nbEnnemis):
     vaisseau = space.Ennemi()
     listeEnnemis.append(vaisseau)
     
